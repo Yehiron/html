@@ -1,65 +1,68 @@
-<!DOCTYPE html> <!--Nos dice que estamos trabajo en html moderno-->
-<html lang="es"><!--Lenguaje de la pagina-->
-<head> <!--No se visualmente pero va lo necesario para que el navegador renderize la pagina-->
-    <meta charset="UTF-8"> <!--Permite utilizar simbolos o caracteres especiales-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi emprendimiento</title> <!--Titulo de la pestana o pagina-->
-    <link rel="icon" href="./assets/carro-deportivo.png"> <!--Enlaza iconos-->
-    <link rel="stylesheet" href="./styles.css"><!--Enlaza css o pagina de estilos a html-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabores del Barrio</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
 </head>
-<body> <!--Es donde se muestra todo el contenido--> 
-    <header> <!--Encabezado de la pagina-->
-        <h1>The Burgery</h1> <!--Titulo principal-->
-        <nav> <!--Seccion para en header y poner mis enlaces-->
-            <a class="productos" href="./productos.html" target="_blank">Productos</a>
-            <!--Ancla: para colocar los links donde quiero redirigir-->
-            <a href="https://www.instagram.com/theburgery_/?hl=es" target="_blank">Instagram</a>
-            <a href="./contacto.html" target="_blank" >Contacto</a>
-        </nav>
-    </header>
+<body>
 
-    <main><!--Espacio para destacar contenido importante o principal-->
-        <section><!--Divide por secciones-->
-            <h2>Pan fresco todos los dias</h2> <!--Es un titulo con menor relevancia-->
-            <p>Horneamos todos los dias a las 3 am</p> <!--Representa un parrafo-->
-        </section>
+  <header>
+    <h1>Sabores del Barrio</h1>
+    <nav class="nav">
+      <a href="./productos.html">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-        <section>
-            <h2>Productos</h2>
-            <img class="burger" src="./assets/images.jpeg" alt="Hamburguesa"> 
-            <!--Agregamos imagenes, src: colocar la ruta de la imagen alt: descripcion de la imagen-->
-        </section>
+  <section id="hero">
+    <h2>Comida casera, hecha con cariño</h2>
+    <p>Pedidos a domicilio en tu barrio, todos los días de 11am a 8pm.</p>
+  </section>
 
-        <section>
-            <h2>Contacto</h2>
-            <p>30000000098</p>
-        </section>
+  <section id="productos">
+    <h2>Nuestros productos</h2>
+    <div class="grid-productos">
 
-        <article>
-            <img id="bg" src="./assets/baguette.jpg" alt="Pan baguette">
-            <h3>Pan frances o baguette</h3>
-            <p>$ 2.500 la unidad</p>
-        </article>
-    </main>
+      <div class="card-producto">
+        <img src="https://picsum.photos/seed/arepa/400/300" alt="Arepa rellena">
+        <div class="card-producto-info">
+          <h3>Arepa rellena</h3>
+          <p>Con queso, carne desmechada y aguacate.</p>
+          <p class="precio">$8.000</p>
+        </div>
+      </div>
 
-    <footer> <!--pie de pagina-->
-        <p>Derechos reservados - 2018</p>
-    </footer>
-    
-    <h2>The Burgery</h2>
-    <h3>The Burgery</h3>
-    <h4>The Burgery</h4>
-    <h5>The Burgery</h5>
-    <h6>The Burgery</h6>
+      <div class="card-producto">
+        <img src="https://picsum.photos/seed/empanada/400/300" alt="Empanadas">
+        <div class="card-producto-info">
+          <h3>Empanadas x6</h3>
+          <p>De pollo o carne, con ají casero.</p>
+          <p class="precio">$12.000</p>
+        </div>
+      </div>
 
-    <div> <!--Es una caja pero no da puntaje en SEO-->
-        <p>Esto es un div</p>
+      <div class="card-producto">
+        <img src="https://picsum.photos/seed/jugo/400/300" alt="Jugo natural">
+        <div class="card-producto-info">
+          <h3>Jugo natural</h3>
+          <p>Elige tu fruta favorita del día.</p>
+          <p class="precio">$5.000</p>
+          <button id="btn">Comprar</button>
+        </div>
+      </div>
+
     </div>
+  </section>
 
+  <footer>
+    <p>&copy; 2026 Sabores del Barrio. Todos los derechos reservados.</p>
+  </footer>
 
-
-
-
-    <p>SEO</p>
 </body>
 </html>

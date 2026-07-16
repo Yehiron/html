@@ -1,0 +1,129 @@
+
+:root {
+    --color-primario: #F7941D;
+    --color-secundario: #1F2D5A;
+    --color-texto: rgb(11, 0, 71);
+    --color-fondo: #FAFAFA;
+    --fuente-principal: "Bebas Neue", sans-serif;
+    --radio-borde: 8px;
+    --sombra-card: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* Reset */
+* {
+    box-sizing: border-box; /* El padding y el border quedan dentro del ancho definido  */
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6;
+}
+
+/* Flexbox = cajas flexibles */
+header {
+    background-color: var(--color-secundario);
+    padding: 1rem 2rem; /* 1rem = 16px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--color-primario);
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--color-primario);
+}
+
+#hero {
+    display: flex;
+    min-height: 60vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREaoqr3RZw7QGhV-T10B1hGC5_cFzsqS-F6i9mictkPw&s=10");
+    background-size: cover;
+    background-position: center;
+   
+}
+
+#hero h2 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+#hero p {
+    color: white;
+}
+
+/* Grid */
+
+#productos {
+    padding: 4rem 2rem;
+}
+
+#productos h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-secundario);
+    margin-bottom: 2rem;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.card-producto {
+    background-color: white;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-card);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2 ease;
+}
+
+.card-producto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.card-producto-info {padding: 1.5rem;}
+.card-producto h3 { font-size: 1.5rem; margin-bottom: 0.5rem;}
+.card-producto p {color: #F7941D; font-size: 1rem;}
+.precio { color: var(--color-secundario) !important;}
+
+
+nav { display: none;}
+header { flex-direction: column; gap: 0.5rem;}
+
+@media (min-width: 768px) {
+    nav {display: flex;}
+    header {flex-direction: row;}
+}
+
+@media (min-width: 1024px) {
+    .grid-productos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tailwind */
+
