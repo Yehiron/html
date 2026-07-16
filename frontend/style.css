@@ -58,9 +58,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     padding: 4rem 2rem;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREaoqr3RZw7QGhV-T10B1hGC5_cFzsqS-F6i9mictkPw&s=10");
-    background-size: cover;
-    background-position: center;
+    background-color: var(--color-secundario);
    
 }
 
